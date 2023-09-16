@@ -1,0 +1,258 @@
+/* CSS custom properties */
+:root {
+    /* Primary color */
+    --dark-blue-main: hsl(233, 47%, 7%);
+    --desaturated-blue-card: hsl(244, 38%, 16%);
+    --soft-violet-accent: hsla(277, 100%, 26%, 0.574);
+    --soft-violet-text: hsl(277, 64%, 61%);
+
+    /* Neutral color */
+    --white: hsl(0, 0%, 100%);
+    --transparent-white-main: hsla(0, 0%, 100%, 0.75);
+    --transparent-white-stat: hsla(0, 0%, 100%, 0.6);
+}
+
+/* Universal styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* General styles */
+
+body {
+    background-color: var(--dark-blue-main);
+    font-family: "Lexend Deca", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0 60px 0;
+    position: relative;
+}
+
+/* Card section */
+
+#stats__card {
+    background-color: var(--desaturated-blue-card);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    gap: 40px;
+}
+
+/* Card header section */
+
+.stats__card-img {
+    position: relative;
+}
+
+.stats__card-img img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.stats__card-img::after {
+    content: "";
+    background-color: var(--soft-violet-accent);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.desktop-img {
+    display: none;
+}
+
+/* Card body section */
+.stats__card-info {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+}
+
+/* Card title section */
+
+.stats__card-info-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    color: var(--white);
+}
+
+strong {
+    color: var(--soft-violet-text);
+}
+
+p {
+    color: var(--transparent-white-main);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Extra info section */
+
+.stats__card-info-extra {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0px 0 50px 0;
+}
+
+.stats__card-info-extra-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h2 {
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+h3 {
+    color: var(--transparent-white-stat);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+/* Footer Section */
+
+footer {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 20px 0px;
+    color: var(--white);
+    font-size: 18px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--soft-violet-text);
+}
+
+/* Media queries */
+@media only screen and (min-width: 1441px) {
+
+    /* General styles */
+    body {
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    /* Card section */
+
+    #stats__card {
+        width: 1200px;
+        display: grid;
+        grid-template-columns: 600px 600px;
+        grid-template-rows: 480px;
+        gap: 0;
+    }
+
+    /* Card header section */
+
+    .stats__card-img img {
+        height: 100%;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .stats__card-img {
+        order: 1;
+        height: 100%;
+    }
+
+    .stats__card-img::after {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .mobile-img {
+        display: none;
+    }
+
+    .desktop-img {
+        display: block;
+    }
+
+    /* Card body section */
+
+    .stats__card-info {
+        width: 80%;
+        justify-self: center;
+        padding: 0px 30px 0px;
+        gap: 60px;
+    }
+
+    /* Card title section */
+
+    .stats__card-info-body {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: start;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        line-height: 1.2;
+        font-size: 15px;
+    }
+
+    /* Extra info section */
+
+    h2 {
+        font-size: 25px;
+        text-align: start;
+    }
+
+    h3 {
+        font-size: 13px;
+        text-align: start;
+    }
+
+    .stats__card-info-extra {
+        width: 100%;
+        flex-direction: row;
+        gap: 80px;
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1440px) {
+    #stats__card {
+        width: 550px;
+    }
+
+    .stats__card-info-extra {
+        flex-direction: row;
+    }
+}
