@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor]()
-- Live Site URL: [Netlify]()
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/preview-card-utilizing-the-css-grid-and-flexbox-systems-yhobW4Rvkj)
+- Live Site URL: [Netlify](https://stats-preview-card-macin.netlify.app/)
 
 ## My process
 
